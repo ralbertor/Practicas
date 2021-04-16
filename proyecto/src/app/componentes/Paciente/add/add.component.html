@@ -1,0 +1,46 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Pacientes</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nombre:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.nombre" name ="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="">Apellidos:</label>
+                    <input type="text" class="form-control" [(ngModel)]="paciente.apellidos"name ="apellidos">
+                </div>
+                <div class="form-group">
+                    <label for="">Usuario:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.usuario"name ="usuario">
+                </div>
+                <div class="form-group">
+                    <label for="">Clave:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.clave"name ="clave">
+                </div>
+                <div class="form-group">
+                    <label for="">Nss:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.nss"name ="nss">
+                </div>
+                <div class="form-group">
+                    <label for="">Direccion:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.direccion"name ="direccion">
+                </div>
+                <div class="form-group">
+                    <label for="">NumTarjeta:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.numTarjeta"name ="numTarjeta">
+                </div>
+                <div class="form-group">
+                    <label for="">Telefono:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.telefono"name ="telefono">
+                </div>
+                <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+            </form>    
+        </div>
+    </div>
+</div>
+
+

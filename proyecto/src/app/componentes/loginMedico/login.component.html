@@ -1,0 +1,19 @@
+<div class="contact_form">
+  <div class="formulario">
+    <form [formGroup]= "form" (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+      <h1>Login</h1>
+        <label for="nombre" class="colocar_nombre">Usuario<span class="obligatorio">*</span> </label>
+        <input type="text" formControlName="usuario" class="form-control"
+        placeholder="Introduzca su nombre de usuario">
+        <div *ngIf="form.get('usuario')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>Introduzca el usuario</div>
+        <label for="clave" class="colocar_clave">Clave<span class="obligatorio">*</span> </label>
+        <input type="password" formControlName="clave" class="form-control"
+        placeholder="Introduzca su clave de seguridad">
+        
+        <div *ngIf="form.get('clave')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>Introduzca la clave</div> 
+        <button type="submit">Log in</button>
+        <p>¿No tienes cuenta? <a class="link" routerLink="/registerMedico">Registrate</a></p>
+
+      </form>
+  </div>
+</div>

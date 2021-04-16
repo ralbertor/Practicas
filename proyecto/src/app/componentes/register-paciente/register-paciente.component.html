@@ -1,0 +1,47 @@
+
+  <div class="contact_form">
+    <div class="formulario">
+      <form [formGroup]= "form" (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+        <h1>Registro</h1>
+          <label for="usuario" class="colocar_usuario">Usuario<span class="obligatorio">*</span> </label>
+          <input type="text" formControlName="usuario" class="form-control"
+          placeholder="Introduzca su nombre de usuario">
+          <div *ngIf="form.get('usuario')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>Introduzca el usuario</div>
+         
+          <label for="clave" class="colocar_clave">Clave<span class="obligatorio">*</span> </label>
+          <input type="password" formControlName="clave" class="form-control"
+          placeholder="Introduzca su clave de seguridad">
+          <div *ngIf="form.get('clave')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>Introduzca la clave</div> 
+         
+          <label for="nombre" class="colocar_nombre">Nombre<span class="obligatorio">*</span> </label>
+          <input type="text" formControlName="nombre" class="form-control"
+          placeholder="Introduzca su nombre">
+          <div *ngIf="form.get('nombre')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>Introduzca el nombre</div>
+          
+          <label for="apellidos" class="colocar_apellidos">Apellidos<span class="obligatorio">*</span> </label>
+          <input type="text" formControlName="apellidos" class="form-control"
+          placeholder="Introduzca sus apellidos">
+          <div *ngIf="form.get('apellidos')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>Introduzca los apellidos</div>
+          
+          <label for="nss" class="colocar_nss">Número de la seguridad social<span class="obligatorio">*</span> </label>
+          <input type="text" formControlName="nss" class="form-control"
+          placeholder="Introduzca su número de la seguridad social">
+          <div *ngIf="form.get('nss')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>Introduzca el número la seguridad social</div>
+         
+          <label for="numTarjeta" class="colocar_numTarjeta">Número de la tarjeta de la seguridad social</label>
+          <input type="text" formControlName="numTarjeta" class="form-control"
+          placeholder="Introduzca su número de tarjeta de la seguridad social">
+          
+          <label for="telefono" class="colocar_telefono">Número de telefono</label>
+          <input type="text" formControlName="telefono" class="form-control"
+          placeholder="Introduzca su número de telefono">
+
+          <label for="direccion" class="colocar_direccion">Direccion</label>
+          <input type="text" formControlName="direccion" class="form-control"
+          placeholder="Introduzca su dirección">
+          
+          <button type="submit">Register</button>
+          <p>¿Tienes una cuenta? <a class="link" routerLink="/loginPaciente">Inicia Sesión</a></p>
+      </form>
+    </div>
+  </div>

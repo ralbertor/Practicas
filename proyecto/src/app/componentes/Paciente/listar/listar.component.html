@@ -1,0 +1,40 @@
+<div class="container col-md-10">
+    <div class="card">
+        <div class="card-header">
+            <h3>Pacientes</h3>
+        </div>
+        <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDOS</th>
+                            <th>USUARIO</th>
+                            <th>NSS</th>
+                            <th>NUMTARJETA</th>
+                            <th>TELEFONO</th>
+                            <th>DIRECCION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-left">
+                            <tr *ngFor="let paciente of pacientes" class="text-left">
+                                <td>{{paciente.id}}</td>
+                                <td>{{paciente.nombre}}</td>
+                                <td>{{paciente.apellidos}}</td>
+                                <td>{{paciente.usuario}}</td>
+                                <td>{{paciente.nss}}</td>
+                                <td>{{paciente.numTarjeta}}</td>
+                                <td>{{paciente.telefono}}</td>
+                                <td>{{paciente.direccion}}</td>
+
+                            <td>
+                                <button (click)="Delete(paciente)" class="btn btn-danger" style="margin-left: auto;">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+<!--<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Pacientes</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nombre:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.nombre" name ="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="">Apellidos:</label>
+                    <input type="text" class="form-control" [(ngModel)]="paciente.apellidos"name ="apellidos">
+                </div>
+                <div class="form-group">
+                    <label for="">Usuario:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.usuario"name ="usuario">
+                </div>
+                <div class="form-group">
+                    <label for="">Clave:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.clave"name ="clave">
+                </div>
+                <div class="form-group">
+                    <label for="">Nss:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.nss"name ="nss">
+                </div>
+                <div class="form-group">
+                    <label for="">Direccion:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.direccion"name ="direccion">
+                </div>
+                <div class="form-group">
+                    <label for="">NumTarjeta:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.numTarjeta"name ="numTarjeta">
+                </div>
+                <div class="form-group">
+                    <label for="">Telefono:</label>
+                    <input type="text" class="form-control"[(ngModel)]="paciente.telefono"name ="telefono">
+                </div>
+                <button (click)="Actualizar(paciente)" class="btn btn-danger">Actualizar</button>
+            </form>    
+        </div>
+    </div>
+</div>-->
+<div class="contact_form">
+    <div class="formulario">
+        <form [formGroup]="form" (ngSubmit)="Actualizar()" #usuarioForm="ngForm">
+            <h1>Actualizar datos</h1>
+            <label for="nombre" class="colocar_nombre">Usuario</label>
+            <input type="text" formControlName="usuario" class="form-control"
+                placeholder="Introduzca su nombre de usuario">
+            <div *ngIf="form.get('usuario')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>
+                Introduzca el usuario</div>
+
+            <label for="clave" class="colocar_clave">Clave</label>
+            <input type="password" formControlName="clave" class="form-control"
+                placeholder="Introduzca su clave de seguridad">
+            <div *ngIf="form.get('clave')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>
+                Introduzca la clave</div>
+
+            <label for="nombre" class="colocar_nombre">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" placeholder="Introduzca su nombre">
+            <div *ngIf="form.get('nombre')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>
+                Introduzca su nombre</div>
+
+            <label for="apellidos" class="colocar_apellidos">Apellidos</label>
+            <input type="text" formControlName="apellidos" class="form-control" placeholder="Introduzca sus apellidos">
+            <div *ngIf="form.get('apellidos')!.hasError('required') && usuarioForm.submitted"
+                class='alert alert-danger'>
+                Introduzca introduzca sus apellidos</div>
+
+            <label for="nss" class="colocar_nss">Nss</label>
+            <input type="text" formControlName="nss" class="form-control" placeholder="Introduzca su nss">
+            <div *ngIf="form.get('nss')!.hasError('required') && usuarioForm.submitted"
+                class='alert alert-danger'>
+                Introduzca introduzca su Nss</div>
+
+            <label for="direccion" class="colocar_direccion">Direccion</label>
+            <input type="text" formControlName="direccion" class="form-control" placeholder="Introduzca su direccion">
+            <div *ngIf="form.get('direccion')!.hasError('required') && usuarioForm.submitted"
+                class='alert alert-danger'>
+                Introduzca introduzca su direccion</div>
+
+            <label for="numTarjeta" class="colocar_numTarjeta">numTarjeta</label>
+            <input type="text" formControlName="numTarjeta" class="form-control" placeholder="Introduzca su numero de tarjeta">
+            <div *ngIf="form.get('numTarjeta')!.hasError('required') && usuarioForm.submitted"
+                class='alert alert-danger'>
+                Introduzca introduzca su numero de tarjeta</div>
+
+                <label for="telefono" class="colocar_telefono">Telefono</label>
+                <input type="text" formControlName="telefono" class="form-control"
+                    placeholder="Introduzca su telefono">
+                <div *ngIf="form.get('telefono')!.hasError('required') && usuarioForm.submitted" class='alert alert-danger'>
+                    Introduzca introduzca su telefono</div>
+
+
+            <button type="submit">Actualizar</button>
+
+        </form>
+    </div>
+</div>

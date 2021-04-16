@@ -1,0 +1,31 @@
+<div class="container col-md-10">
+    <div class="card">
+        <div class="card-header">
+            <h3>Citas</h3>
+        </div>
+        <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>MOTIVO</th>
+                            <th>FECHAHORA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-left">
+                            <tr *ngFor="let cita of citas" class="text-left">
+                                <td>{{cita.id}}</td>
+                                <td>{{cita.motivoCita}}</td>
+                                <td>{{cita.fechaHora}}</td>
+                            <td>
+                              <!-- <button (click)="Editar(cita)" class="btn btn-warning">Editar</button>-->
+                                <button (click)="Delete(cita)" class="btn btn-danger" style="margin-left: auto;">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
